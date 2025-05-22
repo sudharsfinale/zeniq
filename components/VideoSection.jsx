@@ -3,7 +3,7 @@ import React from 'react'
 import { IoIosPlay } from "react-icons/io";
 const VideoSection = () => {
   return (
-   <section className="relative bg-black p-[50px] overflow-hidden h-screen">
+   <section className="relative bg-black p-[50px] overflow-hidden h-screen mb-8">
           <img
             src="/images/common/hero-image.jpg"
             alt="Example"

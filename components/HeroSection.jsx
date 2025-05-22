@@ -46,8 +46,8 @@ const HeroSection = () => {
         <span className="text-5xl md:text-7xl lg:text-9xl font-semibold text-center">NEXT-LEVEL</span>
       </motion.div>
 
-      <motion.div className="text-center" variants={childVariants}>
-        <span className={`text-5xl md:text-7xl lg:text-9xl font-semibold text-center text-white leading-0 ${trumpGothicBold.className}`}>DIGITAL AGENCY</span>
+      <motion.div className="text-center flex items-center justify-center" variants={childVariants}>
+        <span className={`text-5xl md:text-7xl lg:text-9xl font-semibold text-center text-white leading-none ${trumpGothicBold.className}`}>DIGITAL AGENCY</span>
       </motion.div>
 
       <motion.p
