@@ -1,8 +1,11 @@
 "use client";
 import HeroSection from "@/components/HeroSection";
 import SmoothScroll from "@/components/SmoothScroll";
+import SolutionSection from "@/components/SolutionSection";
 import StickyCursor from "@/components/sticky_cursor";
+import VideoSection from "@/components/VideoSection";
 import { useScroll, useTransform, motion } from "framer-motion";
+import Image from "next/image";
 import React, { useRef } from "react";
 
 const Home = () => {
@@ -16,7 +19,7 @@ const Home = () => {
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0.7]);
 
   return (
-    <main className="relative">
+    <main className="relative bg-black">
       <StickyCursor />
       <SmoothScroll />
       <main ref={containerRef} className="relative h-[200vh]">
@@ -26,8 +29,11 @@ const Home = () => {
         >
           <HeroSection />
         </motion.section>
-        <section id="work" className="relative h-screen bg-white"></section>
+        <VideoSection />
       </main>
+      <section  id="work" className="bg-black">
+        <SolutionSection />
+      </section>
     </main>
   );
 };

@@ -43,31 +43,11 @@ const HeroSection = () => {
       animate="visible"
     >
       <motion.div className="text-center" variants={childVariants}>
-        <SplitText
-          text="NEXT-LEVEL"
-          className="text-9xl font-semibold text-center"
-          delay={0}
-          animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
-          animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
-          easing="easeOutCubic"
-          threshold={0.2}
-          rootMargin="-50px"
-          onLetterAnimationComplete={handleAnimationComplete}
-        />
+        <span className="text-5xl md:text-7xl lg:text-9xl font-semibold text-center">NEXT-LEVEL</span>
       </motion.div>
 
-      <motion.div variants={childVariants}>
-        <SplitText
-          text="DIGITAL AGENCY"
-          className={`text-9xl font-semibold text-center text-white leading-40 ${trumpGothicBold.className}`}
-          delay={0}
-          animationFrom={{ opacity: 0, transform: "translate3d(0,50px,0)" }}
-          animationTo={{ opacity: 1, transform: "translate3d(0,0,0)" }}
-          easing="easeOutCubic"
-          threshold={0.2}
-          rootMargin="-50px"
-          onLetterAnimationComplete={handleAnimationComplete}
-        />
+      <motion.div className="text-center" variants={childVariants}>
+        <span className={`text-5xl md:text-7xl lg:text-9xl font-semibold text-center text-white leading-0 ${trumpGothicBold.className}`}>DIGITAL AGENCY</span>
       </motion.div>
 
       <motion.p
