@@ -1,6 +1,7 @@
 "use client";
 import HeroSection from "@/components/HeroSection";
 import Example from "@/components/HoriCarousel";
+import PartnersSection from "@/components/PartnersSection";
 import SmoothScroll from "@/components/SmoothScroll";
 import SolutionSection from "@/components/SolutionSection";
 import StickyCursor from "@/components/sticky_cursor";
@@ -35,9 +36,13 @@ const Home = () => {
       <section  id="work" className="bg-black">
         <SolutionSection />
       </section>
-      <section  id="work" className="bg-black">
+      <section  id="studies" className="bg-black">
         <Example />
       </section>
+      <section  id="work" className="bg-black">
+        <PartnersSection />
+      </section>
+
     </main>
   );
 };
