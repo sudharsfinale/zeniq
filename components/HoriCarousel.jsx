@@ -3,7 +3,7 @@ import { motion, useTransform, useScroll } from "framer-motion";
 import { useRef } from "react";
 
 const Example = () => {
-    const containerVariants = {
+  const containerVariants = {
     hidden: {},
     visible: {
       transition: {
@@ -45,28 +45,26 @@ const HorizontalScrollCarousel = () => {
 
   return (
     <section ref={targetRef} className="relative h-[300vh] bg-[rgb(18,18,18)]">
-        <div className="sticky top-0 flex flex-col items-start overflow-hidden p-8">
+      <div className="sticky top-0 flex flex-col items-start overflow-hidden p-8">
         <motion.div className="text-center">
-        <span className="tracking-[4px] text-3xl md:text-5xl lg:text-7xl font-semibold text-center text-white uppercase">
-          We Build{" "}
-          <span
-            className={`${trumpGothicItalic.className}`}
-            style={{ color: "var(--primary-color)" }}
-          >
-            Software Solutions
+          <span className="tracking-[4px] text-3xl md:text-5xl lg:text-7xl font-semibold text-center text-white uppercase">
+            Featured
+            <span
+              className={`${trumpGothicItalic.className}`}
+              style={{ color: "var(--primary-color)" }}
+            >
+              Case Studies
+            </span>
           </span>
-        </span>
-      </motion.div>
-      <motion.div className="text-center mt-8 mx-4">
-        <span className="text-xl md:text-2xl font-semibold text-center text-gray-400">
-          <span
-            className={`${degularRegular.className}`}
-          >
-            We’ve delivered solutions to hundreds of clients in too many industries to count.
+        </motion.div>
+        <motion.div className="text-left mt-8 mx-0">
+          <span className="text-xl md:text-2xl font-semibold text-left text-gray-400">
+            <span className={`${degularRegular.className}`}>
+              Just like you, we want to build products that make us proud.
+            </span>
           </span>
-        </span>
-      </motion.div>
-        </div>
+        </motion.div>
+      </div>
       <div className="sticky top-0 flex h-screen items-center overflow-hidden">
         <motion.div style={{ x }} className="flex gap-4">
           {cards.map((card) => {
@@ -84,7 +82,7 @@ const Card = ({ card }) => {
       key={card.id}
       className="group relative h-[450px] w-[450px] overflow-hidden bg-neutral-200"
     >
-        <img src={card.image} alt="" className="h-full w-full object-cover"/>
+      <img src={card.image} alt="" className="h-full w-full object-cover" />
       {/* <div
         style={{
           backgroundImage: `url(${card.image})`,
