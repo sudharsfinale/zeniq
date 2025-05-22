@@ -41,14 +41,14 @@ const HorizontalScrollCarousel = () => {
     target: targetRef,
   });
 
-  const x = useTransform(scrollYProgress, [0, 1], ["1%", "-95%"]);
+  const x = useTransform(scrollYProgress, [0, 1], ["5%", "-95%"]);
 
   return (
     <section ref={targetRef} className="relative h-[300vh] bg-[rgb(18,18,18)]">
-      <div className="sticky top-0 flex flex-col items-start overflow-hidden p-8">
+      <div className="flex flex-col items-start overflow-hidden pt-8 pl-[100px]">
         <motion.div className="text-center">
           <span className="tracking-[4px] text-3xl md:text-5xl lg:text-7xl font-semibold text-center text-white uppercase">
-            Featured
+            Featured{" "}
             <span
               className={`${trumpGothicItalic.className}`}
               style={{ color: "var(--primary-color)" }}
@@ -65,7 +65,7 @@ const HorizontalScrollCarousel = () => {
           </span>
         </motion.div>
       </div>
-      <div className="sticky top-0 flex h-screen items-center overflow-hidden">
+      <div className="sticky top-[0px] flex h-[90dvh] items-center overflow-hidden">
         <motion.div style={{ x }} className="flex gap-4">
           {cards.map((card) => {
             return <Card card={card} key={card.id} />;
@@ -80,7 +80,7 @@ const Card = ({ card }) => {
   return (
     <div
       key={card.id}
-      className="group relative h-[450px] w-[450px] overflow-hidden bg-neutral-200"
+      className="group relative h-[500px] w-[500px] overflow-hidden bg-neutral-200"
     >
       <img src={card.image} alt="" className="h-full w-full object-cover" />
       {/* <div
